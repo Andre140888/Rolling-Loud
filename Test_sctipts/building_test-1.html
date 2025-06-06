@@ -118,11 +118,8 @@
       function mousePressed() {
         // Controleren of er op een gebouw is geklikt
         let clickedBuilding = null;
-        for (let b of buildings) {
-          if (
-            mouseX > b.x && mouseX < b.x + b.w &&
-            mouseY > b.y && mouseY < b.y + b.h
-          ) {
+        for (let jusb of buildings) {
+          if (scaledMouseX > b.x && scaledMouseX < b.x + b.w && scaledMouseY > b.y && scaledMouseY < b.y + b.h) {
             clickedBuilding = b;
             break;
           }
