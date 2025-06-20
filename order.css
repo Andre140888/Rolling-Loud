@@ -1,0 +1,174 @@
+/* Global & Body */
+body {
+  background-color: #475b98;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Main Container */
+#main_container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #335c5a;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  box-sizing: border-box;
+  /* removed scrolling */
+  max-height: none;
+  overflow: visible;
+}
+
+/* Page Title */
+#main_container h1 {
+  color: white;
+  text-align: center;
+  font-size: clamp(24px, 6vw, 96px);
+  margin: 0 0 1rem;
+}
+
+/* Order Section Layout */
+#order_container {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch; /* children share same height */
+}
+
+/* Poster Side */
+#poster {
+  flex: 1;
+  width: clamp(200px, 60vw, 600px);
+  height: auto;
+  max-height: clamp(200px, 70vh, 625px);
+  padding-left: clamp(10px, 5vw, 100px);
+  object-fit: contain; /* if it’s an img */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+/* Form Side */
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 2rem;
+  box-sizing: border-box;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: white;
+  font-size: clamp(16px, 2.5vw, 24px);
+}
+
+/* Text / Email / Tel / Number Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem 3rem;
+  padding-left: 0;
+  max-height: 3rem;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #f4bf50;
+  font-size: clamp(14px, 2vw, 16px);
+  display: block;
+  margin: 0;
+  text-align: left;
+  max-width: min(20vw, 392px);
+}
+
+/* Quantity Selector */
+.quantity-selector {
+  min-width: 20px;
+  max-width: min(20vw, 392px);
+  max-height: min(1vh, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #f4bf50;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.quantity-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #af6cff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  width: 3rem;
+  text-align: center;
+  padding: 0.25rem;
+}
+
+/* Quantity Display */
+#quantity {
+  color: #fff;
+  background-color: #af6cff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Buy Button */
+#buyButton {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #af6cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Small-Screen (<600px) Adjustments */
+@media (max-width: 600px) {
+  #order_container {
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    max-width: 100%;
+  }
+
+  #poster {
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    padding-left: 0;
+  }
+
+  #main_container {
+    padding: 1rem;
+    min-width: 250px;
+  }
+}

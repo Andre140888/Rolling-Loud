@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolling Loud Tickets</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap"
+      rel="stylesheet"
+    />
+    <script src="order.js"></script>
+    <link rel="stylesheet" href="order.css" />
+  </head>
+
+  <body>
+    <div id="main_container">
+      <h1>Order</h1>
+      <div id="order_container">
+        <img id="poster" src="images/rollingLoudPoster.png" />
+
+        <form>
+          <label for="name">Volledige naam</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Bijv. Jan Jansen"
+            required
+          />
+          <br />
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Bijv. jan@email.com"
+            required
+          />
+          <br />
+
+          <label for="number">Telefoonnummer</label>
+          <input
+            type="text"
+            name="number"
+            id="number"
+            placeholder="Bijv. 0612345678"
+            required
+          />
+          <br />
+
+          <label for="quantity">Aantal tickets</label>
+          <div class="quantity-selector">
+            <button type="button" class="quantity-btn minus" id="decrease">
+              -
+            </button>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              value="1"
+              min="1"
+              readonly
+            />
+            <button type="button" class="quantity-btn plus" id="increase">
+              +
+            </button>
+          </div>
+
+          <button type="submit" id="buyButton">Buy now</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
